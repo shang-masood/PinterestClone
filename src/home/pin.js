@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-function Pins(props) {
+function Pins() {
     
 const Pin=styled.div
 `
@@ -12,10 +12,9 @@ background-color:red
 
 `
   return (
-    <Pin>
-
-
-    </Pin>
+    <div>
+    helooo
+    </div>
   )
 
 

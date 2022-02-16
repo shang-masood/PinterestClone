@@ -5,7 +5,7 @@ import NavBar from './Routepages';
 function App() {
   return (
     <div className="App">
-      <Header />
+     <Header />
      <NavBar />
     </div>
   );
