@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './images/Pinterest-logo.png';
 import user from './images/user.png';
 import magnifying from './images/magnifying-glass.png';
@@ -8,6 +8,7 @@ import arrow from './images/arrow.png';
 import './header.css';
 import { Link } from 'react-router-dom';
 const Header=(props) =>{
+    const [input,setinput]=useState("")
     return (
        
         <div className='main-header'>
@@ -19,7 +20,7 @@ const Header=(props) =>{
             </div>
             <div className='middle-header'>
             <img src={magnifying} />
-            <input placeholder='search'/>
+            <input placeholder='search' onChange={(e)=>console.log(e.target.value)}/>
                 </div>
                 <div className='right-header'>
                   
@@ -40,4 +41,4 @@ const Header=(props) =>{
 }
 
 export default Header
-//hover is problem and I have problem in designing should be the header is higherthan now
+//hover is problem and I have problem in designing should be the header is resizable

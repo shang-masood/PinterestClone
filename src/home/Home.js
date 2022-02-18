@@ -1,12 +1,39 @@
-import React from 'react'
-
+import React, {useState,useEffect} from 'react'
+import axios from 'axios'
+import Unsplash from '../api/Unsplash'
+import styled from 'styled-components'
+ 
+ 
 const Home=(props) => {
+  const [images, setImage] = useState([]);
+
+  useEffect(() => {
+    fetchImages();
+  }, [])
+
+  const fetchImages = (count = 10) => {
+    const apiRoot = "https://api.unsplash.com";
+    const accessKey = "c1SuvtELR4tbOJudJnZW4Mc3QAnsMIVrTSo7yVFtLLY"
+
+    axios
+      .get(`${apiRoot}/photos/random?client_id=${accessKey}&count=${count}`)
+      .then(res => {
+        setImage([...images, ...res.data]);
+      })
+  }
   
+
     return (
         
-        <div>
-        <h1>home</h1> 
-     </div>
+      
+          <Wrapper>
+
+                 {images.map(image => (
+            <Unsplash url={image.urls.thumb} key={image.id} />
+          ))}
+          
+
+          </Wrapper>
        
     )
 
@@ -18,3 +45,14 @@ const Home=(props) => {
 }
 
 export default Home
+const Wrapper=styled.div
+`
+display: grid;
+grid-template-columns: repeat(auto-fill, 330px);
+gap: 20px;
+justify-content: center;
+margin: 70px auto;
+height: auto !important;
+
+
+`
