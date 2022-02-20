@@ -7,8 +7,16 @@ import bell from './images/bell-ring.png';
 import arrow from './images/arrow.png';
 import './header.css';
 import { Link } from 'react-router-dom';
+
+
 const Header=(props) =>{
     const [input,setinput]=useState("")
+    const onSearch =(e)=>{
+        e.preventDefault()
+        props.onSubmit(input)
+      
+
+    }
     return (
        
         <div className='main-header'>
@@ -20,7 +28,11 @@ const Header=(props) =>{
             </div>
             <div className='middle-header'>
             <img src={magnifying} />
-            <input placeholder='search' onChange={(e)=>console.log(e.target.value)}/>
+            <form>
+            <input placeholder='search' onChange={(e)=>setinput(e.target.value)}/>
+            <button type='submit' onClick={onSearch}></button>
+            </form>
+              
                 </div>
                 <div className='right-header'>
                   

@@ -2,7 +2,7 @@ import React, {useState,useEffect} from 'react'
 import axios from 'axios'
 import Unsplash from '../api/Unsplash'
 import styled from 'styled-components'
- 
+import InfiniteScroll from 'react-infinite-scroll-component'
  
 const Home=(props) => {
   const [images, setImage] = useState([]);
@@ -21,11 +21,17 @@ const Home=(props) => {
         setImage([...images, ...res.data]);
       })
   }
-  
+ 
+
 
     return (
         
-      
+      <InfiniteScroll
+          dataLength={images.length}
+           next={fetchImages}
+            hasMore={true}
+
+>
           <Wrapper>
 
                  {images.map(image => (
@@ -34,7 +40,7 @@ const Home=(props) => {
           
 
           </Wrapper>
-       
+          </InfiniteScroll>
     )
 
 

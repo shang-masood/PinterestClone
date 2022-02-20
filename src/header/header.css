@@ -97,17 +97,22 @@ border-radius: 50px;
     font-size: 16px;
       
 }
-.middle-header>input{
-    background-color: transparent;
-    border: none;
+form >input{
     width: 100%;
-    height: 100%;
-      display: flex;
-      font: size 1.2em;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding-right: 3px;
+  font-size: 1.1rem;
 }
-.middle-header>input:focus{
+form>input:focus{
     outline: none;
 }
 input,
 input::-webkit-input-placeholder {
     font-size: 16px; }
+button
+{
+   border: none;
+}
