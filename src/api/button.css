@@ -1,0 +1,15 @@
+.rounded-button
+{
+    padding: 0.5rem;
+    box-sizing:border-box;
+   border-radius: 100%;
+   width: 100px;
+   height: 40px;
+   display:flex;
+   background-color: rgb(197, 13, 13);
+   color: aliceblue;
+}
+.rounded-button:hover
+{
+    background-color: gray;
+}

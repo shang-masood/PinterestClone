@@ -10,13 +10,15 @@ import { Link } from 'react-router-dom';
 
 
 const Header=(props) =>{
+
     const [input,setinput]=useState("")
+
     const onSearch =(e)=>{
         e.preventDefault()
-        props.onSubmit(input)
-      
-
+    props.onSubmit(input);
+     
     }
+   
     return (
        
         <div className='main-header'>
@@ -32,7 +34,7 @@ const Header=(props) =>{
             <input placeholder='search' onChange={(e)=>setinput(e.target.value)}/>
             <button type='submit' onClick={onSearch}></button>
             </form>
-              
+    
                 </div>
                 <div className='right-header'>
                   
