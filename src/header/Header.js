@@ -7,7 +7,7 @@ import bell from './images/bell-ring.png';
 import arrow from './images/arrow.png';
 import './header.css';
 import { Link } from 'react-router-dom';
-
+import Modal from '../notification/Not';
 
 const Header=(props) =>{
 
@@ -18,9 +18,9 @@ const Header=(props) =>{
     props.onSubmit(input);
      
     }
-   
+   const [shownot,setshownot]=useState(false);
     return (
-       
+       <div>
         <div className='main-header'>
             <div className='left-header'>
              <img src={logo} />
@@ -30,6 +30,7 @@ const Header=(props) =>{
             </div>
             <div className='middle-header'>
             <img src={magnifying} />
+           
             <form>
             <input placeholder='search' onChange={(e)=>setinput(e.target.value)}/>
             <button type='submit' onClick={onSearch}></button>
@@ -38,9 +39,9 @@ const Header=(props) =>{
                 </div>
                 <div className='right-header'>
                   
-                    <Link to='Not'><img src={bell} /></Link>
+                    <button onClick={(e) => {setshownot(`${shownot == false? true:false}`); }}><img src={bell} /></button>
                     <Link to='Chat'> <img src={chat} /></Link>
-                    < Link to='User'> <img src={user} /></Link>
+                    < Link to='Saved'> <img src={user} /></Link>
             
                 <div className='arrow' > 
                     <Link to='Settings' >  <img src={arrow} /></Link>
@@ -48,7 +49,16 @@ const Header=(props) =>{
                     </div>
                     
                     </div>
-                    
+                  
+        </div>
+        {shownot && (
+            <Modal
+            shown={shownot}
+            close={() => {
+                setshownot(false);
+            }}
+          />
+           )}    
         </div>
         
     )

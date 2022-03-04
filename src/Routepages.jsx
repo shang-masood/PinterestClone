@@ -12,12 +12,12 @@ const NavBar = () =>(
         <Routes>
         <Route path='/' element={<Home/>}></Route>
         <Route path='/Not' element={<Not/>}></Route>
-        <Route path='/Settings' element={<Settings/>}></Route>
+        <Route path='/Saved' element={<Saved/>}></Route>
         <Route path='/User' element={<User/>}></Route>
         <Route path='/Chat' element={<Chat/>}></Route>
         <Route path='/SearchShow' element={<SearchShow/>}></Route>
-        <Route path='/Saved' element={<Saved/>}></Route>
-        <Route path='/Created' element={<Created/>}></Route>
+        <Route path='Saved' element={<Saved/>}></Route>
+        <Route path='Created' element={<Created/>}></Route>
       </Routes>
     )
     

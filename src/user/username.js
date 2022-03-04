@@ -7,7 +7,7 @@ import Shmodal from './shmodal'
 const Usename=(props)=> {
     const [follower,setfollowers]=useState(false);
     const [folData,setfolData]=useState('');
-    const [showshare,setshare]=useState('false');
+    const [showshare,setshare]=useState(false);
     return (
         <Wrapper>
             {follower && (
@@ -45,10 +45,7 @@ const Usename=(props)=> {
              edit profile
          </button>
          </Link>
-         <Pages>
-             <Link to='Created'>Created</Link>
-             <Link to='Saved'>saved</Link>
-         </Pages>
+       
          </Container>
         </Wrapper>
     )
@@ -88,24 +85,11 @@ display: flex;
 flex-direction: row;
 justify-content:center;
 padding:15px;
-cursor:pointer
 right:100px;
 cursor:pointer;
 
 `
-const Pages =styled.div
-`
 
-
-color:black;
-cursor:pointer
-&:hover
-{
-    opacity:0.6;
-}
-
-
-`
 const Btn = styled.button
 `
 width:80px;

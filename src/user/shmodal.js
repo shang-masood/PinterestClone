@@ -1,8 +1,8 @@
 import React from 'react';
 import './modal.css';
-import { useState } from 'react';
+
 function Modal({ children, shown, close }) {
-    const [send,setsent]=useState('send')
+    
   return shown ? (
     <div className="shmodal-overlay"
     

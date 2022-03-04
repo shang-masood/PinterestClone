@@ -1,8 +1,10 @@
 import React from 'react'
-
+import User from './User'
 const Created = () => {
   return (
-    <div>Created</div>
+    <div>  
+      <User /> 
+    </div>
   )
 }
 

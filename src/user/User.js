@@ -1,48 +1,43 @@
 import React from 'react'
 import styled from 'styled-components'
 import Username from './username'
+import { Link } from 'react-router-dom'
 const User=()=> {
     return (
-        <>
+        <div>
         <Username />
-      
-   </>
+        <Pages>
+        <Page href='Created'>Created</Page>
+         <Page href='Saved'>Saved</Page>
+         </Pages>
+   </div>
     )
 }
 
 export default User;
-const Wrapper=styled.div
-`
-background-color:white;
-display:flex;
-width:100%;
-height:100%;
-margin-top:150px;
 
-
+const Page =styled.a
 `
-const Container =styled.div
-`
-width:100%;
-height:350px;
-background-color:white;
-margin:0 auto;
-max-width:1260px;
+padding:1em;
 text-align: center;
-`
-const Userr=styled.p
-`
-color:grey;
-font-size:12px;
-margin:15px;
+display:inline-block;
+text-decoration: none !important;
+margin:0 auto;
+color:black;
+font-size: large;
+   font-weight: bolder;
+&:hover
+{
+    background-color: #efefef;
+    border-radius:15px;
+    height:20px;
+}
 
+`
+const Pages =styled.div
+`
 
-`
-const Follow = styled.div
-`
-display: flex;
-flex-direction: row;
-align-items: center;
-padding:15px;
-cursor:pointer
+background-color:white;
+text-align: center;
+
 `
