@@ -1,15 +1,21 @@
-import React from 'react'
+import React ,{useState} from 'react'
 import styled from 'styled-components';
-import './button.css'
-import RoundedButton from './button';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faShare, faEllipsisH } from '@fortawesome/free-solid-svg-icons'
+import Oimg from './Oimg';
 const Unsplash = (props) => {
   let {urls}=props;
+  const [openadd,setOadd]=useState(false);
   return (
-    
+   
     <Pins>
-      <Img src={urls?.regular} alt="" />
+      {openadd &&(
+      <Oimg shown={openadd} 
+      close={() => {
+        setOadd(false);}}
+        data={urls}
+        
+        />
+      )}
+      <Img src={urls} alt="" onClick={(e) => {setOadd(true);}}  />
     
   
     </Pins>

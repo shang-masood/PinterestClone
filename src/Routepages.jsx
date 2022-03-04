@@ -8,6 +8,8 @@ import React from 'react';
   import SearchShow from './search/searchShow';
   import Saved from './user/Saved';
   import Created from './user/Created';
+  import Showpin from './pin/showPin';
+  import AddPin from './pin/AddPin';
 const NavBar = () =>(
         <Routes>
         <Route path='/' element={<Home/>}></Route>
@@ -18,6 +20,8 @@ const NavBar = () =>(
         <Route path='/SearchShow' element={<SearchShow/>}></Route>
         <Route path='Saved' element={<Saved/>}></Route>
         <Route path='Created' element={<Created/>}></Route>
+        <Route path="/Showpin/:Name" element={<Showpin />}></Route>
+        <Route path="AddPin" element={<AddPin />}></Route>
       </Routes>
     )
     

@@ -41,7 +41,7 @@ const Home=(props) => {
                images.map(( image) => 
                {
                  let {urls}=image;
-                 return <Unsplash  urls={urls}/>
+                 return <Unsplash  urls={urls?.regular}/>
                }
                )
               }

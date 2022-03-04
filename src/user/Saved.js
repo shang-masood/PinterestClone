@@ -3,9 +3,13 @@ import User from './User'
 import styled from 'styled-components'
 import OpenAdd from './openAdd'
 import './modal.css'
+import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom'
 const Saved = (props) => {
   const [openadd,setOadd]=useState(false);
-  console.log(openadd)
+  const boards = useSelector(state => state.board.board);
+  console.log(boards)
+  const name="all  pins"
   return (
     <div>
       <User />
@@ -21,16 +25,33 @@ const Saved = (props) => {
      
        <Boards>
          <Pin_Bord>
+         <Link to={`/Showpin/saved`} className='aa'>
          <Board>
          <Img_Board />
-         </Board>
-         <h2>All pins</h2>
+        </Board > 
+         <h2>saved</h2>
+         </Link>
          </Pin_Bord>
          <Pin_Bord>
-         <Board/>
+         <Link to={`/showPin/${name}`} className='aa'>
+         <Board>
+         <Img_Board />
+        </Board > 
          <h2>All pins</h2>
+         </Link>
          </Pin_Bord>
-       </Boards>
+         {
+          boards.map(brd => {
+            return    <Pin_Bord  key={brd.id}>
+               <Link to={`/Showpin/${brd.text}`} className='aa'>
+            <Board></Board>
+              <h2>{brd.text}</h2>
+              </Link>
+          </Pin_Bord>
+          })
+        }
+         
+       </Boards >
     </div>
   )
 }

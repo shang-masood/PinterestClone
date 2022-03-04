@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './modal.css';
+import AddBoard from '../pin/addBoard';
+import { Link } from 'react-router-dom';
 function OpenAdd  ({ close, show, children })  {
-    const showHideClassName = show ? "Amodal display-block" : "Amodal display-none";
+    const [showpin,setpin]=useState(false);
 
     return show ? (
+      <div>
+           {showpin &&(
+      <AddBoard show={showpin} 
+      close={() => {
+        setpin(false);}}/>
+      )}
         <div className="Amodal"
         
           onClick={() => {
@@ -18,15 +26,15 @@ function OpenAdd  ({ close, show, children })  {
             }}
           >
             <span>create</span>
-            <h4> pin</h4>
-            <h4> board</h4>
+           <Link to='AddPin'> <h4 > pin</h4></Link>
+            <h4 onClick={(e) => {setpin(true);}}> board</h4>
         
             <button className="modal-close"  onClick={close}> </button>
             {children}
           </div>
           
         </div>
-      ) : null;
+        </div> ) : null;
     }
 
 export default OpenAdd
