@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+import { useNavigate } from "react-router-dom"
 import './user.css'
 import Fmodal from './fmodal';
 import Shmodal from './shmodal'
@@ -8,6 +8,10 @@ const Usename=(props)=> {
     const [follower,setfollowers]=useState(false);
     const [folData,setfolData]=useState('');
     const [showshare,setshare]=useState(false);
+    let navigate = useNavigate(); 
+    const routeChange = () =>{ 
+      let path = `/Settings`; 
+      navigate(path);}
     return (
         <Wrapper>
             {follower && (
@@ -40,11 +44,11 @@ const Usename=(props)=> {
          <Btn onClick={(e) => {setshare(true);}}>
              Share
          </Btn>
-         <Link to='Settings'>
-        < button className='btn1'>
+    
+        < button className='btn1'onClick={routeChange}>
              edit profile
          </button>
-         </Link>
+      
        
          </Container>
         </Wrapper>

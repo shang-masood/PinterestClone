@@ -1,14 +1,23 @@
 import React from 'react'
 import styled from 'styled-components'
 import Username from './username'
-import { Link } from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 const User=()=> {
+    let navigate = useNavigate(); 
+  const routeChange = () =>{ 
+    let path = `/User/Created`; 
+    navigate(path);
+  }
+  const routeChanges = () =>{ 
+    let path = `/User/Saved`; 
+    navigate(path);
+  }
     return (
         <div>
         <Username />
         <Pages>
-        <Page href='Created'>Created</Page>
-         <Page href='Saved'>Saved</Page>
+      <Page onClick={routeChange}> Created</Page>
+      <Page onClick={routeChanges}> Saved</Page>
          </Pages>
    </div>
     )
@@ -16,7 +25,7 @@ const User=()=> {
 
 export default User;
 
-const Page =styled.a
+const Page =styled.button
 `
 padding:1em;
 text-align: center;

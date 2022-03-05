@@ -41,12 +41,9 @@ const Header=(props) =>{
                   
                     <button onClick={(e) => {setshownot(`${shownot == false? true:false}`); }}><img src={bell} /></button>
                     <Link to='Chat'> <img src={chat} /></Link>
-                    < Link to='Saved'> <img src={user} /></Link>
+                    < Link to='/User/Saved'> <img src={user} /></Link>
             
-                <div className='arrow' > 
-                    <Link to='Settings' >  <img src={arrow} /></Link>
-                    
-                    </div>
+              
                     
                     </div>
                   

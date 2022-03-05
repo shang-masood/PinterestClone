@@ -8,7 +8,8 @@ const Oimg = ({ children, shown, close,data }) => {
     const onAdd = (title,txt)=>{
       let desc=""
       let t=""
-        dispatch(AddEvent.addsaved({title,txt,desc,t}))
+      let c="saved"
+        dispatch(AddEvent.addsaved({title,txt,desc,t,c}))
         sets("saved")
       }
     return shown ? (

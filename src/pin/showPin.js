@@ -11,6 +11,7 @@ const Showpin = (props) => {
      const onRemove = (name)=>{
       dispatch(AddEvent.removeBoard(name))
     }
+   console.log(boards)
   return (
    
     <div className='show-board'>
@@ -26,6 +27,9 @@ const Showpin = (props) => {
                boards.map((brd) => 
                { if(Name===brd.title){
                  return <Unsplash  urls={brd.txt}/>}
+              
+                if(Name==="all pins"){
+                return <Unsplash  urls={brd.txt}/>}
                }
                )
               }

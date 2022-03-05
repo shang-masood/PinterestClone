@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 const initialboard = {
-    board:[],saved:[],
+    board:["saved","all pins"],saved:[],
     
 }
 const Slice = createSlice({
@@ -8,7 +8,7 @@ const Slice = createSlice({
   initialState:initialboard,
   reducers: {
     add(state, action) {
-      state.board.unshift({id: Math.round(Math.random()*10000000), text: action.payload});
+      state.board.push(action.payload);
     },
     addsaved(state,action)
     {

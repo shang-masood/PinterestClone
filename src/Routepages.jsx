@@ -13,15 +13,13 @@ import React from 'react';
 const NavBar = () =>(
         <Routes>
         <Route path='/' element={<Home/>}></Route>
-        <Route path='/Not' element={<Not/>}></Route>
-        <Route path='/Saved' element={<Saved/>}></Route>
-        <Route path='/User' element={<User/>}></Route>
+        <Route path='/Settings' element={<Settings/>}></Route>
+        <Route path='/User/Saved' element={<Saved/>}></Route>
         <Route path='/Chat' element={<Chat/>}></Route>
         <Route path='/SearchShow' element={<SearchShow/>}></Route>
-        <Route path='Saved' element={<Saved/>}></Route>
-        <Route path='Created' element={<Created/>}></Route>
+        <Route path='/User/Created' element={<Created/>}></Route>
         <Route path="/Showpin/:Name" element={<Showpin />}></Route>
-        <Route path="/Saved/AddPin" element={<AddPin />}></Route>
+        <Route path="User/Saved/AddPin" element={<AddPin />}></Route>
       </Routes>
     )
     
