@@ -8,7 +8,7 @@ import arrow from './images/arrow.png';
 import './header.css';
 import { Link } from 'react-router-dom';
 import Modal from '../notification/Not';
-
+import Chat from '../chat/chat';
 const Header=(props) =>{
 
     const [input,setinput]=useState("")
@@ -19,6 +19,7 @@ const Header=(props) =>{
      
     }
    const [shownot,setshownot]=useState(false);
+   const [showchat,setshowchat]=useState(false);
     return (
        <div>
         <div className='main-header'>
@@ -40,7 +41,7 @@ const Header=(props) =>{
                 <div className='right-header'>
                   
                     <button onClick={(e) => {setshownot(`${shownot == false? true:false}`); }}><img src={bell} /></button>
-                    <Link to='Chat'> <img src={chat} /></Link>
+                    <button onClick={(e) => {setshowchat(true)}}> <img src={chat} /></button>
                     < Link to='/User/Saved'> <img src={user} /></Link>
             
               
@@ -53,6 +54,14 @@ const Header=(props) =>{
             shown={shownot}
             close={() => {
                 setshownot(false);
+            }}
+          />
+           )}    
+              {showchat && (
+            <Chat
+            shown={showchat}
+            close={() => {
+                setshowchat(false);
             }}
           />
            )}    

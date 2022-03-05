@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 const initialboard = {
-    board:["saved","all pins"],saved:[],
+    board:["saved","all pins"],saved:[],chat:[],
     
 }
 const Slice = createSlice({
@@ -13,6 +13,10 @@ const Slice = createSlice({
     addsaved(state,action)
     {
       state.saved.push(action.payload);
+    },
+    addchat(state,action)
+    {
+      state.chat.push(action.payload);
     },
     removeBoard(state, action){
         state.board= state.board.filter(board => board.text !== action.payload)

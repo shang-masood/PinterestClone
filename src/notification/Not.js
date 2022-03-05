@@ -1,8 +1,7 @@
-import React , { useRef, useState } from 'react'
+import React from 'react'
 import './not.css'
-import Loader from "react-loader-spinner";
 function Modal({ children, shown, close }) {
-  const [load,setload]=useState(true)
+  
 return shown ? (
   <div className="notification"
   
@@ -18,7 +17,9 @@ return shown ? (
       }}
     > <div>
     <h3>updates</h3>
+    <div style={{textAlign:"center" }}> 
     <img style={{width:"50px",height:"50px",margin:"0 auto"}} src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif" />
+    </div>
     </div>
       <button className="modal-close"  onClick={close}> </button>
       {children}
