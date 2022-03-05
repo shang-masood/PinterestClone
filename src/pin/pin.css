@@ -121,3 +121,134 @@ justify-content:center;
       pointer-events:visible;
 
     }
+/***********/
+/*design for add pin */
+.buils_pin
+{
+  display: flex;
+  width:100%;
+  height:100%;
+  background-color:#efefef;
+  
+ 
+
+}
+.border-pin
+{
+width:880px;
+height: 600px;
+background-color: #ffffff;
+padding-top: 100px;
+border-radius: 16px;
+display: flex;
+flex-direction: column;
+padding-left: 40px;
+padding-right: 40px;
+justify-content: center;
+align-self: center;
+margin-top: 100px;
+margin-left: 100px;
+margin-right: 100px;
+
+}
+.contents-border
+{
+ 
+ 
+}
+
+.div-add-image
+>button
+{
+  box-sizing: border-box;
+  background-color: rgb(173, 169, 169);
+  width: 40px;
+  height: 40px;
+  font:larger;
+  font-weight: bolder;
+  border-radius: 50px;
+  margin-top: 50%;
+  color:rgb(107, 107, 107);
+}
+.div-add-image
+{
+  border: rgb(158, 156, 156) 1px dashed;
+  border-radius: 8px;
+  background-color: #efefef;
+  color:rgb(107, 107, 107);
+  width: 340px;
+  height: 510px ;
+  text-align: center;
+  padding-top:40 px;
+}
+.div-add-image>h6
+{
+  position: absolute;
+  bottom:0;
+  left:190px;
+
+}
+.header-div-details
+{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 110px;
+  left:740px;
+
+}
+.div-details
+{
+ width: 150px;
+ height: 100px;
+  align-items: right;
+}
+.header-div-details>select
+{
+  width: 236px;
+  height: 40px;
+  border-radius: 16px;
+  color:rgb(107, 107, 107);
+  border: none;
+}
+.header-div-details>button
+{
+  cursor: pointer;
+    width: 80px;
+    height: 48px;
+    border-radius: 20px;
+    font-size: larger;
+    font-weight: bold;
+    background-color: red;
+    color: #ffffff;
+    pointer-events:visible;
+}
+.information
+{
+ 
+  width: 350px;
+  position: absolute;
+  top:220px;
+  left:510px;
+}
+.inp-tit
+{
+ width: 100%;
+ height: 65px;
+ font: 65px;;
+ font-weight: bolder;
+ border:none;
+ border-bottom:#efefef 3px solid;
+ margin:30px;
+}
+.user-details>img
+{
+  width: 50px;
+  height: 50px;
+  border-radius: 40px;
+ 
+}
+.user-details
+{
+  margin-left:30px;
+}

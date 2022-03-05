@@ -21,7 +21,7 @@ const NavBar = () =>(
         <Route path='Saved' element={<Saved/>}></Route>
         <Route path='Created' element={<Created/>}></Route>
         <Route path="/Showpin/:Name" element={<Showpin />}></Route>
-        <Route path="AddPin" element={<AddPin />}></Route>
+        <Route path="/Saved/AddPin" element={<AddPin />}></Route>
       </Routes>
     )
     

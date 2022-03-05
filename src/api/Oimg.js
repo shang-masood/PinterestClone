@@ -6,7 +6,9 @@ const Oimg = ({ children, shown, close,data }) => {
     const dispatch =  useDispatch()
     const [s,sets]=useState("save")
     const onAdd = (title,txt)=>{
-        dispatch(AddEvent.addsaved({title,txt}))
+      let desc=""
+      let t=""
+        dispatch(AddEvent.addsaved({title,txt,desc,t}))
         sets("saved")
       }
     return shown ? (
