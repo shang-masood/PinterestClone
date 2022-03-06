@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/PinterestClone/static/css/main.36c7ce9f.chunk.css",
+    "main.js": "/PinterestClone/static/js/main.5de83a80.chunk.js",
+    "main.js.map": "/PinterestClone/static/js/main.5de83a80.chunk.js.map",
+    "runtime-main.js": "/PinterestClone/static/js/runtime-main.89cae681.js",
+    "runtime-main.js.map": "/PinterestClone/static/js/runtime-main.89cae681.js.map",
+    "static/js/2.9ff17c18.chunk.js": "/PinterestClone/static/js/2.9ff17c18.chunk.js",
+    "static/js/2.9ff17c18.chunk.js.map": "/PinterestClone/static/js/2.9ff17c18.chunk.js.map",
+    "static/js/3.65a36aa1.chunk.js": "/PinterestClone/static/js/3.65a36aa1.chunk.js",
+    "static/js/3.65a36aa1.chunk.js.map": "/PinterestClone/static/js/3.65a36aa1.chunk.js.map",
+    "index.html": "/PinterestClone/index.html",
+    "precache-manifest.e44629dad0a5467b9294f1df3e82c9c0.js": "/PinterestClone/precache-manifest.e44629dad0a5467b9294f1df3e82c9c0.js",
+    "service-worker.js": "/PinterestClone/service-worker.js",
+    "static/css/main.36c7ce9f.chunk.css.map": "/PinterestClone/static/css/main.36c7ce9f.chunk.css.map",
+    "static/js/2.9ff17c18.chunk.js.LICENSE.txt": "/PinterestClone/static/js/2.9ff17c18.chunk.js.LICENSE.txt",
+    "static/media/Pinterest-logo.png": "/PinterestClone/static/media/Pinterest-logo.717253e4.png",
+    "static/media/bell-ring.png": "/PinterestClone/static/media/bell-ring.06cc6859.png",
+    "static/media/chat.png": "/PinterestClone/static/media/chat.f534d31f.png",
+    "static/media/magnifying-glass.png": "/PinterestClone/static/media/magnifying-glass.c4362de7.png",
+    "static/media/user.png": "/PinterestClone/static/media/user.0d713ad3.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.89cae681.js",
+    "static/js/2.9ff17c18.chunk.js",
+    "static/css/main.36c7ce9f.chunk.css",
+    "static/js/main.5de83a80.chunk.js"
+  ]
+}
