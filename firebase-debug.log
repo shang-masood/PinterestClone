@@ -1,0 +1,43 @@
+[debug] [2022-03-06T16:19:21.137Z] ----------------------------------------------------------------------
+[debug] [2022-03-06T16:19:21.143Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Sara- Shanga\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-03-06T16:19:21.144Z] CLI Version:   10.2.2
+[debug] [2022-03-06T16:19:21.144Z] Platform:      win32
+[debug] [2022-03-06T16:19:21.145Z] Node Version:  v12.22.8
+[debug] [2022-03-06T16:19:21.149Z] Time:          Sun Mar 06 2022 19:19:21 GMT+0300 (GMT+03:00)
+[debug] [2022-03-06T16:19:21.150Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-03-06T16:19:21.382Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-03-06T16:19:21.382Z] > authorizing via signed-in user (shangg.masood2022@gmail.com)
+[debug] [2022-03-06T16:19:21.383Z] [iam] checking project pinterest-a07bb for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-03-06T16:19:21.389Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/pinterest-a07bb:testIamPermissions [none]
+[debug] [2022-03-06T16:19:21.390Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/pinterest-a07bb:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-03-06T16:19:22.585Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/pinterest-a07bb:testIamPermissions 200
+[debug] [2022-03-06T16:19:22.586Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/pinterest-a07bb:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-03-06T16:19:22.593Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/pinterest-a07bb [none]
+[debug] [2022-03-06T16:19:23.032Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/pinterest-a07bb 200
+[debug] [2022-03-06T16:19:23.032Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/pinterest-a07bb {"projectId":"pinterest-a07bb","projectNumber":"1069605237886","displayName":"pinterest","name":"projects/pinterest-a07bb","resources":{"hostingSite":"pinterest-a07bb"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'pinterest-a07bb'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-03-06T16:19:23.076Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/pinterest-a07bb [none]
+[debug] [2022-03-06T16:19:23.585Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/pinterest-a07bb 200
+[debug] [2022-03-06T16:19:23.585Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/pinterest-a07bb {"projectId":"pinterest-a07bb","projectNumber":"1069605237886","displayName":"pinterest","name":"projects/pinterest-a07bb","resources":{"hostingSite":"pinterest-a07bb"},"state":"ACTIVE"}
+[debug] [2022-03-06T16:19:23.598Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/1069605237886/sites/pinterest-a07bb/versions [none]
+[debug] [2022-03-06T16:19:23.599Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/1069605237886/sites/pinterest-a07bb/versions {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-03-06T16:19:25.118Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/1069605237886/sites/pinterest-a07bb/versions 500
+[debug] [2022-03-06T16:19:25.119Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/1069605237886/sites/pinterest-a07bb/versions {"error":{"code":500,"message":"Internal error encountered.","status":"INTERNAL"}}
+[error] 
+[error] Error: HTTP Error: 500, Internal error encountered.
+[debug] [2022-03-06T16:19:25.135Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 500,
+      "message": "Internal error encountered.",
+      "status": "INTERNAL"
+    }
+  },
+  "response": {
+    "statusCode": 500
+  }
+}
